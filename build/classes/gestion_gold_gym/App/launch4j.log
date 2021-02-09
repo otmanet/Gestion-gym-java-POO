@@ -1,0 +1,33 @@
+
+
+Version:	3.12
+CmdLine:	F:\programmation orienté objet_java\project\gestion_gold_gym\src\gestion_gold_gym\App\Gym.exe --l4j-debug
+WOW64:		yes
+Working dir:	F:\programmation orienté objet_java\project\gestion_gold_gym\src\gestion_gold_gym\App\.
+Java min ver:	1.004.000
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Check launcher:	C:\Program Files\Java\jre1.8.0_261\bin\javaw.exe (OK)
+Match:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_261
+Check launcher:	C:\Program Files\Java\jre1.8.0_261\bin\javaw.exe (OK)
+Match:		1.008.000_261
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8
+Ignore:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Development Kit\1.8.0_251
+Ignore:		1.008.000_251
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\11.0.8
+Check launcher:	C:\Program Files\Java\jdk-11.0.8\bin\javaw.exe (OK)
+Match:		1.011.000_008
+Check:		SOFTWARE\JavaSoft\JDK\15
+Check launcher:	C:\Program Files\Java\jdk-15\bin\javaw.exe (OK)
+Match:		1.015.000
+Runtime used:	1.015.000 (64-bit)
+Launcher:	C:\Program Files\Java\jdk-15\bin\javaw.exe
+Launcher args:	-jar "F:\programmation orienté objet_java\project\gestion_gold_gym\src\gestion_gold_gym\App\Gym.exe"
+Args length:	100/32768 chars
+Exit code:	0
