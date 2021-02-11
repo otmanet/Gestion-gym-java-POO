@@ -8,5 +8,7 @@ Frame for subscribers : <br/><br/>
 ![subscribers](https://user-images.githubusercontent.com/37757213/107693418-66d0c780-6cae-11eb-9e99-1b81ff2afb85.PNG) <br/><br/>
 Frame for subscribers (should pay  today) :<br/><br/>
 ![subscribers_pay_today](https://user-images.githubusercontent.com/37757213/107694078-389fb780-6caf-11eb-9161-01bff68bcc5a.PNG) <br/><br/>
+Fram fot subscribers (not pay) : <br/><br/>
+![subscribers_not_pay](https://user-images.githubusercontent.com/37757213/107694430-a9df6a80-6caf-11eb-8004-f9ae650b574b.PNG)
 
 
