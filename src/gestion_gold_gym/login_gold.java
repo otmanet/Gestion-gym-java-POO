@@ -256,9 +256,7 @@ public class login_gold extends javax.swing.JFrame {
                     mf.jLabel1.setText("WELCOME<"+jusername.getText()+">");
                     mf.jLabel2.setText("Le Nombre De personne Abonné ="+Integer.toString(MyFunction.DataCount("user")));
                     mf.jLabel3.setText("Le nombre de personnes qui doivent payer ="+Integer.toString(MyFunction.DataCountToday()));
-                    mf.jLabel4.setText("Le Nombre De Personne Pas Paiement ="+Integer.toString(MyFunction.DataCountPasPaiement()));
-                    mf.jLabel6.setText(" Nombre d'abonnés : "+Integer.toString(MyFunction.DataCountabonne()));
-                    
+                    mf.jLabel4.setText("Le Nombre De Personne Pas Paiement ="+Integer.toString(MyFunction.DataCountPasPaiement()));          
                 }
 
             } catch (Exception e) {

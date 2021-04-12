@@ -531,7 +531,7 @@ public class Gestion_user extends javax.swing.JFrame {
                     MainFram.jLabel2.setText("Le Nombre De personne Abonné ="+Integer.toString(MyFunction.DataCount("user")));
                     MainFram.jLabel3.setText("Le nombre de personnes qui doivent payer ="+Integer.toString(MyFunction.DataCountToday()));
                     MainFram.jLabel4.setText("Le Nombre De Personne Pas Paiement ="+Integer.toString(MyFunction.DataCountPasPaiement()));
-                    MainFram.jLabel6.setText(" Nombre d'abonnés : "+Integer.toString(MyFunction.DataCountabonne()));
+                   
                     jTextField_id.setText("");
                     jTextField_nom.setText("");
                     jTextField_pernom.setText("");
