@@ -88,13 +88,13 @@ public class MyFunction {
         }
         return total;
     }
-      public  String nom(Integer number_inscription) throws ClassNotFoundException, SQLException{
+      public  String nom(String pernom) throws ClassNotFoundException, SQLException{
             Connection con=MyConnection.openConnection();
             PreparedStatement ps;
             String nom="";
             try {
-                ps=con.prepareStatement("select nom from user WHERE number_ins=?");
-                ps.setInt(1, number_inscription);
+                ps=con.prepareStatement("select nom from user WHERE CONCAT(id,nom,pernom,cin) like ?");
+                ps.setString(1,"%"+pernom+"%");
                ResultSet res=ps.executeQuery();
                if(res.next()){
                   nom=res.getString(1);
@@ -104,29 +104,29 @@ public class MyFunction {
             }
             return nom;
         }
-        public String pernome(Integer number_ins) throws ClassNotFoundException, SQLException{
+        public String number_ins(String pernom) throws ClassNotFoundException, SQLException{
             Connection con=MyConnection.openConnection();
             PreparedStatement ps;
-            String pernom="";
+            String numero="";
             try {
-                ps=con.prepareStatement("select pernom from user WHERE number_ins=?");
-                ps.setInt(1,number_ins );
+                ps=con.prepareStatement("select number_ins from user WHERE CONCAT(id,nom,pernom,cin) like ?");
+                ps.setString(1,"%"+pernom+"%");
                 ResultSet res=ps.executeQuery();
                 if(res.next()){
-                    pernom=res.getString(1);
+                    numero=res.getString(1);
                 }
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, e);
             }
-            return pernom;
+            return numero;
         }
-        public String dateInscription(Integer number_ins) throws ClassNotFoundException, SQLException{
+        public String dateInscription(String pernom) throws ClassNotFoundException, SQLException{
             Connection con=MyConnection.openConnection();
             PreparedStatement ps;
             String date="";
             try {
-                ps=con.prepareStatement("select date_ins from user WHERE number_ins=?");
-                ps.setInt(1,number_ins);
+                ps=con.prepareStatement("select date_ins from user WHERE CONCAT(id,nom,pernom,cin) like ?");
+                ps.setString(1,"%"+pernom+"%");
                 ResultSet res=ps.executeQuery();
                 if(res.next()){
                     date=res.getString(1);
@@ -136,20 +136,20 @@ public class MyFunction {
             }
             return date;
         }
-         public String paiement(Integer number_ins) throws ClassNotFoundException, SQLException{
+         public String paiement(String pernom) throws ClassNotFoundException, SQLException{
             Connection con=MyConnection.openConnection();
             PreparedStatement ps;
-            String date="";
+            String Paiment="";
             try {
-                ps=con.prepareStatement("select paiement from user WHERE number_ins=?");
-                ps.setInt(1,number_ins);
+                ps=con.prepareStatement("select paiement from user WHERE CONCAT(id,nom,pernom,cin) like ?");
+                ps.setString(1,"%"+pernom+"%");
                 ResultSet res=ps.executeQuery();
                 if(res.next()){
-                    date=res.getString(1);
+                    Paiment=res.getString(1);
                 }
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, e);
             }
-            return date;
+            return Paiment;
         }
 }

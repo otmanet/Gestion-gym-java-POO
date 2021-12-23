@@ -473,13 +473,6 @@ public class Gestion_user extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jTextField_searchKeyTyped
 
-    private void jTextField_numero_insKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_numero_insKeyTyped
-        // TODO add your handling code here:
-        if(!Character.isDigit(evt.getKeyChar())){
-            evt.consume();
-        }
-    }//GEN-LAST:event_jTextField_numero_insKeyTyped
-
     private void jTextField_phoneKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_phoneKeyTyped
         // TODO add your handling code here:
         if(!Character.isDigit(evt.getKeyChar())){
@@ -531,7 +524,7 @@ public class Gestion_user extends javax.swing.JFrame {
                     MainFram.jLabel2.setText("Le Nombre De personne Abonné ="+Integer.toString(MyFunction.DataCount("user")));
                     MainFram.jLabel3.setText("Le nombre de personnes qui doivent payer ="+Integer.toString(MyFunction.DataCountToday()));
                     MainFram.jLabel4.setText("Le Nombre De Personne Pas Paiement ="+Integer.toString(MyFunction.DataCountPasPaiement()));
-                    MainFram.jLabel6.setText(" Nombre d'abonnés : "+Integer.toString(MyFunction.DataCountabonne()));
+                   
                     jTextField_id.setText("");
                     jTextField_nom.setText("");
                     jTextField_pernom.setText("");
@@ -659,6 +652,13 @@ public class Gestion_user extends javax.swing.JFrame {
         jLabel_image.setIcon(ResizeImage(path));
         }
     }//GEN-LAST:event_jTable_userKeyReleased
+
+    private void jTextField_numero_insKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_numero_insKeyTyped
+        // TODO add your handling code here:
+        if(!Character.isDigit(evt.getKeyChar())){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField_numero_insKeyTyped
 
     /**
      * @param args the command line arguments

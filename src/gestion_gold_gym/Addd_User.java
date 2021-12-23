@@ -299,7 +299,7 @@ public class Addd_User extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel_photo, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(22, Short.MAX_VALUE))))
+                        .addContainerGap(10, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -375,7 +375,10 @@ public class Addd_User extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -402,8 +405,7 @@ public class Addd_User extends javax.swing.JFrame {
             err_nom.setVisible(true);
         }else if(jTextField_pernom.getText().equals("")){
             err_pernom.setVisible(true);
-        }else if(jTextField_nmbr_ins.getText().equals("")){
-            err_numero_ins.setVisible(true);
+       
         }else if(jTextField_cin.getText().equals("")){
             err_cin.setVisible(true);
         }else if(jTextField_phone.getText().equals("")){
@@ -416,7 +418,7 @@ public class Addd_User extends javax.swing.JFrame {
                 if(! u.isUserExist(jTextField_cin.getText())){
                 String nom =jTextField_nom.getText();
                 String pernom=jTextField_pernom.getText();
-                Integer number_ins=Integer.valueOf(jTextField_nmbr_ins.getText().toString());
+                Integer number_ins=0;
                 String cin =jTextField_cin.getText();
                 String phone=jTextField_phone.getText();
                 String paiement="paiement";
@@ -431,7 +433,7 @@ public class Addd_User extends javax.swing.JFrame {
                 MainFram.jLabel2.setText("Le Nombre De personne Abonné ="+Integer.toString(MyFunction.DataCount("user")));
                 MainFram.jLabel3.setText("Le nombre de personnes qui doivent payer ="+Integer.toString(MyFunction.DataCountToday()));
                 MainFram.jLabel4.setText("Le Nombre De Personne Pas Paiement ="+Integer.toString(MyFunction.DataCountPasPaiement()));
-                 MainFram.jLabel6.setText(" Nombre d'abonnés : "+Integer.toString(MyFunction.DataCountabonne()));
+              
                 jTextField_nom.setText("");
                 jTextField_pernom.setText("");
                 jTextField_nmbr_ins.setText("");
@@ -458,13 +460,6 @@ public class Addd_User extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTextField_phoneKeyTyped
 
-    private void jTextField_nmbr_insKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_nmbr_insKeyTyped
-        // TODO add your handling code here:
-        if(!Character.isDigit(evt.getKeyChar())){
-            evt.consume();
-        }
-    }//GEN-LAST:event_jTextField_nmbr_insKeyTyped
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         JFileChooser file=new JFileChooser();
@@ -482,6 +477,13 @@ public class Addd_User extends javax.swing.JFrame {
             System.out.println("NO File Select ");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField_nmbr_insKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField_nmbr_insKeyTyped
+        // TODO add your handling code here:
+        if(!Character.isDigit(evt.getKeyChar())){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField_nmbr_insKeyTyped
     public ImageIcon ResizeImage(String ImagePath){
         ImageIcon icon=new ImageIcon(ImagePath);
         Image img=icon.getImage();

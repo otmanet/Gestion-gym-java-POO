@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class MyConnection {
      final static  String JDBC_DRIVER="com.mysql.jdbc.Driver";
-    final static String DB_URL="jdbc:mysql://localhost:3306/gold_gym";
+    final static String DB_URL="jdbc:mysql://localhost:3306/gold_gym?verifyServerCertificate=false&useSSL=true";
     final static String USERNAME="root";
     final static String PASSWORD="";
     public static Connection openConnection()throws ClassNotFoundException, SQLException{

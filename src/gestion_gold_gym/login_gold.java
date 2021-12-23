@@ -217,7 +217,7 @@ public class login_gold extends javax.swing.JFrame {
        try {
             Statement stat1=con.createStatement();
              String err_username=jusername.getText();
-             ResultSet res1=stat1.executeQuery("SELECT * FROM user_gold WHERE username<>'"+err_username+"'");
+             ResultSet res1=stat1.executeQuery("SELECT * FROM user_gold WHERE username<>'"+jusername+"'");
            if(res1.next()){
                        error_username.setVisible(true);
            }
@@ -227,7 +227,7 @@ public class login_gold extends javax.swing.JFrame {
         try {
              Statement stat2=con.createStatement();
              String err_password=String.valueOf(jpassword.getPassword());
-             ResultSet res2=stat2.executeQuery("SELECT * FROM user_gold WHERE password<>'"+err_password+"'");
+             ResultSet res2=stat2.executeQuery("SELECT * FROM user_gold WHERE password<>'"+jpassword+"'");
            if(res2.next()){
                        error_password.setVisible(true);
            }
@@ -255,10 +255,8 @@ public class login_gold extends javax.swing.JFrame {
                    mf.setExtendedState(JFrame.MAXIMIZED_BOTH);
                     mf.jLabel1.setText("WELCOME<"+jusername.getText()+">");
                     mf.jLabel2.setText("Le Nombre De personne Abonné ="+Integer.toString(MyFunction.DataCount("user")));
-                    mf.jLabel3.setText("Le nombre de personnes qui doivent payer ="+Integer.toString(MyFunction.DataCountToday()));
-                    mf.jLabel4.setText("Le Nombre De Personne Pas Paiement ="+Integer.toString(MyFunction.DataCountPasPaiement()));
-                    mf.jLabel6.setText(" Nombre d'abonnés : "+Integer.toString(MyFunction.DataCountabonne()));
-                    
+                    mf.jLabel3.setText("Le Nombre de personnes qui doivent payer ="+Integer.toString(MyFunction.DataCountToday()));
+                    mf.jLabel4.setText("Le Nombre De Personne Pas Paiement ="+Integer.toString(MyFunction.DataCountPasPaiement()));          
                 }
 
             } catch (Exception e) {
