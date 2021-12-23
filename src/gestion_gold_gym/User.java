@@ -24,6 +24,7 @@ public class User {
       public void  insertdeleteupdate(char operation, Integer id, String nom,String pernom, Integer number_ins,
               String cin,String phone,String date_ins,String prix,String paiement,String photo) throws ClassNotFoundException, SQLException{
           Connection con=MyConnection.openConnection();
+        //motarjim  sql 
         PreparedStatement ps;
           if(operation=='i'){
               ps=con.prepareStatement("INSERT INTO user(nom,pernom,number_ins,cin,phone,date_ins,prix,paiement,photo) VALUES(?,?,?,?,?,?,?,?,?)");

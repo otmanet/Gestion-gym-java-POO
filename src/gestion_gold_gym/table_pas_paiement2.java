@@ -630,8 +630,7 @@ public class table_pas_paiement2 extends javax.swing.JFrame {
             err_nom.setVisible(true);
         }else if(jTextField_pernom.getText().equals("")){
             err_pernom.setVisible(true);
-        }else if(jTextField_numero_ins.getText().equals("")){
-            err_numero_ins.setVisible(true);
+        
         }else if(jTextField_cin.getText().equals("")){
             err_cin.setVisible(true);
         }else if(jTextField_phone.getText().equals("")){
@@ -643,7 +642,7 @@ public class table_pas_paiement2 extends javax.swing.JFrame {
                 int id=Integer.valueOf(jTextField_id.getText());
                 String nom =jTextField_nom.getText();
                 String pernom=jTextField_pernom.getText();
-                Integer number_ins=Integer.valueOf(jTextField_numero_ins.getText().toString());
+                Integer number_ins=0;
                 String cin =jTextField_cin.getText();
                 String phone=jTextField_phone.getText();
                 String paiement="paiement";
